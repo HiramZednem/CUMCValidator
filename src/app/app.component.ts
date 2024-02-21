@@ -17,15 +17,18 @@ export class AppComponent {
     
     
     if (!this.caracteres.every( caracter => caracteresValidos.includes(caracter) )) {
-      console.error('Contiene caracteres fuera del alfabeto')
+      this.caracteres = [];
+      alert('Contiene caracteres fuera del alfabeto')
       return;
     }  // caracteres fuera de los validos
     if (this.caracteres[0] != caracteresValidos[0] ) {
-      console.error('Primer caracter incorrecto')
+      this.caracteres = [];
+      alert('Primer caracter incorrecto')
       return;
     } //no inicia con C
     if (this.caracteres.length > 4) {
-      console.error('Longitud de la cadena incorrecta')
+      this.caracteres = [];
+      alert('Longitud de la cadena incorrecta')
       return;
     } // mayor a 4
 
@@ -36,16 +39,17 @@ export class AppComponent {
 
       if (caracteresValidos.includes(element)) {
         caracteresValidos.splice(caracteresValidos.indexOf(element),1);
-      } else {
-        console.error('Cadena invalida')
+      } else {   
+        this.caracteres = [];  
+        alert('Cadena invalida')
         cadenaValida = false;
         return;
       }
 
     });
+
     if (cadenaValida) {
       console.log('todo salio bien')
-    }
-
+    } 
   }
 }
