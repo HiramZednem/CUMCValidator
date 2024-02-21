@@ -1,5 +1,30 @@
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="input-group mb-3 pt-5">
+          <input type="text" [(ngModel)]="inputText" placeholder="Ingresa cadena" class="form-control">
+          <button type="button" class="btn btn-primary" (click)="onClick()">Validar</button>
+        </div>
+      </div>
+    </div>
 
-<!-- app.component.html -->
-<input type="text" [(ngModel)]="inputText" placeholder="Ingresa cadena">
-<button (click)="onClick()">Validar</button>
+    
 
+
+    <div class="row justify-content-center">
+        <div class="col-md-2">
+            <div class="rounded-circle bg-white border border-dark text-dark d-flex justify-content-center align-items-center" style="height: 100px; width: 100px;">Div 1</div>
+          </div>
+
+      
+
+          <div class="col-md-2">
+            <div class="rounded-circle bg-white border border-dark text-dark d-flex justify-content-center align-items-center" style="height: 100px; width: 100px;">
+                <div class="rounded-circle bg-white border border-dark text-dark d-flex justify-content-center align-items-center position-absolute" style="height: 90px; width: 90px; margin: auto;"> div 2</div>
+            </div>
+          </div>
+    </div>
+
+
+  </div>
+  
