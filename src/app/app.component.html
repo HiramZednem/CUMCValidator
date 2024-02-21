@@ -12,6 +12,14 @@
     <!-- PINTADA DE AUTOMATA -->
     <div class="row justify-content-center">
         <ng-container *ngFor="let char of caracteres; let i = index; let last = last">
+
+            <div class="col-md-1" *ngIf="i == 0">
+                <div class="d-flex 
+                            justify-content-center 
+                            align-items-center"
+                     style="height: 100px; width: 100px; font-size: 25px;">---></div>
+            </div>
+
             <div class="col-md-1">
                 <div class="rounded-circle 
                             bg-white 
